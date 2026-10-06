@@ -1,0 +1,11 @@
+# Python virtual environments (never upload these)
+.venv/
+venv/
+env/
+# Runtime databases (reports, input state); created on first use
+backend/data/
+# Operator uploads: keep the folders, not the files
+uploads/*/*
+!uploads/*/.gitkeep
+__pycache__/
+*.pyc

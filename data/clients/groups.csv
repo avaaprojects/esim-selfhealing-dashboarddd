@@ -1,0 +1,5 @@
+group_id,client_id,name,description,provenance
+GRP-101,CL-001,Depot trackers,Asset trackers on the depot and yard network,SYNTHETIC / SIMULATED
+GRP-102,CL-001,Cold-chain fleet,Refrigerated units on roaming profiles,SYNTHETIC / SIMULATED
+GRP-201,CL-002,Substation gateways,Metering gateways behind the grid access network,SYNTHETIC / SIMULATED
+GRP-301,CL-003,Ward monitors,Bedside monitors on a private slice,SYNTHETIC / SIMULATED

@@ -1,0 +1,4 @@
+network_id,name,plmn,rat,region,cells,auth_id,provenance
+NET-A,Metro core (simulated),001-01,LTE / NR-NSA,Depot and highway corridor,CELL-4471;CELL-6602,AUTH-EPS,SYNTHETIC / SIMULATED
+NET-B,Grid access network (simulated),001-01,NR SA,Substation footprint,CELL-2210;CELL-8814,AUTH-5G,SYNTHETIC / SIMULATED
+NET-LIVE,Prototype live grid,001-01,Simulated,Real-time telemetry generator,CELL-LIVE-1;CELL-LIVE-2;CELL-LIVE-3;CELL-LIVE-4,AUTH-EPS,SYNTHETIC / SIMULATED

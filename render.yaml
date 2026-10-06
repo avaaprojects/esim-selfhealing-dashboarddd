@@ -1,0 +1,19 @@
+# One-click deploy on Render: Dashboard -> New -> Blueprint -> pick this repo.
+#
+# The free plan is enough to show the dashboard to someone: it sleeps after 15
+# minutes idle and takes about a minute to wake on the next request. It has no
+# persistent disk, so reports and accounts are rebuilt from scratch whenever the
+# service restarts — fine for a demo, not for anything you need to keep. Set a
+# real pair of passwords below (or in the Render dashboard) before sharing the
+# link: anyone with it can sign in.
+services:
+  - type: web
+    name: esim-selfhealing-dashboard
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DEMO_OWNER_PASSWORD
+        sync: false          # set it in the Render dashboard, not in this file
+      - key: DEMO_CLIENT_PASSWORD
+        sync: false

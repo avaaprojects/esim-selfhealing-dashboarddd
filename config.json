@@ -1,0 +1,9 @@
+{
+  "_comment": "Deployment settings. Delete this file to use the defaults. See backend/services/settings.py.",
+  "severity": {
+    "high_sigma": 45.0,
+    "medium_sigma": 18.0,
+    "shared_profile_raises": true,
+    "unresolved_raises": true
+  }
+}

@@ -1,0 +1,24 @@
+# docker compose up --build   ->   http://localhost:8000
+#
+# Set the demo passwords here (or remove DEMO_ACCOUNTS/DEMO_*_PASSWORD and
+# create accounts yourself with tools/manage_accounts.py). They are only used
+# the first time the accounts store is created.
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: "8000"
+      # DEMO_ACCOUNTS: "off"              # start with no accounts at all
+      DEMO_OWNER_PASSWORD: "${DEMO_OWNER_PASSWORD:-owner-demo-2026}"
+      DEMO_CLIENT_PASSWORD: "${DEMO_CLIENT_PASSWORD:-client-demo-2026}"
+      # CORS_ALLOW_ORIGINS: "https://dashboard.example.com"
+    volumes:
+      - esim-data:/app/backend/data       # accounts, reports, input selections
+      - esim-uploads:/app/uploads         # operator uploads
+    restart: unless-stopped
+
+volumes:
+  esim-data:
+  esim-uploads:

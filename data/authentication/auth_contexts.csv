@@ -1,0 +1,3 @@
+auth_id,method,key_epoch,smsr_key_epoch,nominal_aka_fail_per_100,note,provenance
+AUTH-EPS,EPS-AKA (4G),7,7,0.8,Mutual authentication with a per-profile key epoch shared by eUICC and SM-SR,SYNTHETIC / SIMULATED
+AUTH-5G,5G-AKA,7,7,0.8,5G primary authentication; same eUICC / SM-SR key-epoch rule,SYNTHETIC / SIMULATED

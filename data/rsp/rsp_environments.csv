@@ -1,0 +1,3 @@
+rsp_env_id,name,smdp_endpoint,smsr_endpoint,interfaces,mode,notes,provenance
+RSP-SIM-1,"Bundled RSP model, primary",smdp.sim.example,smsr.sim.example,ES2+;ES9+;ES10x,Simulated (esim_selfhealing.rsp_api.RSPClient),"Default environment; SM-DP+ reachable, key epochs in sync",SYNTHETIC / SIMULATED
+RSP-SIM-2,"Bundled RSP model, bootstrap bearer",smdp-b.sim.example,smsr-b.sim.example,ES2+;ES9+;ES10x,Simulated (esim_selfhealing.rsp_api.RSPClient),Secondary environment used when a bearer failover is planned,SYNTHETIC / SIMULATED

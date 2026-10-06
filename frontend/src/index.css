@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-void text-slate-200 font-sans antialiased;
+    background-image:
+      radial-gradient(900px 520px at 18% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
+      radial-gradient(760px 460px at 88% 0%, rgba(139, 92, 246, 0.12), transparent 62%),
+      radial-gradient(700px 700px at 50% 120%, rgba(56, 189, 248, 0.06), transparent 65%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Visible keyboard focus everywhere, including inside the glass cards. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-agent/70 ring-offset-2 ring-offset-void;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.22);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  /* The one surface treatment used across the whole app. */
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.035] shadow-glass backdrop-blur-xl;
+  }
+
+  .glass-quiet {
+    @apply rounded-xl border border-white/[0.07] bg-white/[0.02];
+  }
+
+  .num {
+    @apply font-mono tabular-nums;
+  }
+
+  .label {
+    @apply text-[11px] font-medium tracking-wide text-slate-400;
+  }
+}
+
+/* Anyone who has asked their OS to calm motion down gets a static interface;
+   the pipeline still colours its active stage, it just does not pulse. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
